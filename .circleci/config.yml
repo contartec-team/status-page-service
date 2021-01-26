@@ -57,9 +57,11 @@ jobs:
 
       - run:
           name    : Running unit tests
+          command : cp .env.example .env
+
+      - run:
+          name    : Running unit tests
           command : npm run test
-          environment :
-            LOCAL_PORT: 3000
 
       - store_artifacts:
           path    : test-results.xml
