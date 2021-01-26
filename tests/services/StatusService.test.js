@@ -5,7 +5,7 @@ const StatusService = rewire('../../lib/services/StatusService')
 
 const SpyMock = require('@contartec-team/spy-mock/lib/SpyMock')
 
-describe('StateService', () => {
+describe('StatusService', () => {
   describe('.DEFAULT_AXIOS_PARAMS', () => {
     context('when env vars are valid', () => {
       let axiosParams = {}

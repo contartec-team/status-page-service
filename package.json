@@ -1,5 +1,5 @@
 {
-  "name": "@contartec-team/status-page",
+  "name": "@contartec-team/status-page-service",
   "version": "0.3.0",
   "description": "",
   "main": "",
@@ -30,22 +30,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://contartec-team@github.com/contartec-team/status-page.git"
+    "url": "git+https://contartec-team@github.com/contartec-team/status-page-service.git"
   },
   "keywords": [
     "node",
     "js",
     "generic",
-    "status-page"
+    "status-page-service"
   ],
   "author": "contartec",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/contartec-team/status-page/issues"
+    "url": "https://github.com/contartec-team/status-page-service/issues"
   },
-  "homepage": "https://github.com/contartec-team/status-page#readme",
+  "homepage": "https://github.com/contartec-team/status-page-service#readme",
   "devDependencies": {
     "@contartec-team/git-hooks": "git+https://github.com/contartec-team/git-hooks.git",
+    "@contartec-team/spy-mock": "^0.2.0",
     "@contartec-team/version-release": "^0.1.0",
     "chai": "^4.2.0",
     "chai-as-promised": "^5.3.0",
@@ -59,19 +60,17 @@
     "jsdoc": "^3.6.2",
     "mocha": "^6.1.4",
     "mocha-lcov-reporter": "^1.3.0",
-    "module-alias": "^2.2.2",
     "nyc": "^14.1.1",
-    "sinon": "^9.2.4",
+    "rewire": "^5.0.0",
+    "sinon": "^9.0.3",
+    "sinon-chai": "^3.5.0",
     "sinon-mongoose": "^2.2.1"
   },
   "dependencies": {
+    "aws-sdk": "^2.828.0",
+    "axios": "^0.21.1",
     "bluebird": "^3.7.0",
-    "dotenv": "^6.0.0",
-    "mongodb": "^3.1.6",
-    "mongoose": "^5.9.19",
-    "mongoose-lifecycle": "^1.0.0",
-    "redis": "^2.8.0",
-    "redis-rejson": "^1.0.0"
+    "dotenv": "^6.0.0"
   },
   "husky": {
     "hooks": {

@@ -2,7 +2,7 @@ version: 2
 
 jobs:
   checkout_code:
-    working_directory: /home/circleci/status-page
+    working_directory: /home/circleci/status-page-service
 
     docker:
       - image: circleci/node:12
@@ -16,7 +16,7 @@ jobs:
             - ./
 
   node_dependencies:
-    working_directory: /home/circleci/status-page
+    working_directory: /home/circleci/status-page-service
 
     docker:
       - image: circleci/node:12
@@ -42,7 +42,7 @@ jobs:
             - ./node_modules
 
   tests:
-    working_directory: /home/circleci/status-page
+    working_directory: /home/circleci/status-page-service
 
     docker:
       - image: circleci/node:12
@@ -56,19 +56,10 @@ jobs:
           key: node-cache-{{ .Environment.CACHE_VERSION }}-{{ .Branch }}-{{ checksum "package.json" }}
 
       - run:
-          name    : Waiting for MongoDB
-          command : dockerize -wait tcp://localhost:27017 -timeout 1m
-
-      - run:
-          name    : Waiting for Redis
-          command : dockerize -wait tcp://localhost:6379 -timeout 1m
-
-      - run:
           name    : Running unit tests
           command : npm run test
           environment :
-            LOCAL_PORT        : 3000
-            MONGODB_URL_TEST  : mongodb://localhost:27017/contartec-test
+            LOCAL_PORT: 3000
 
       - store_artifacts:
           path    : test-results.xml
@@ -87,7 +78,7 @@ jobs:
             - ./coverage
 
   npm_version:
-      working_directory: /home/circleci/status-page
+      working_directory: /home/circleci/status-page-service
 
       docker:
         - image: circleci/node:12
@@ -104,7 +95,7 @@ jobs:
             command : npm run update-version
 
   npm_release:
-    working_directory: /home/circleci/status-page
+    working_directory: /home/circleci/status-page-service
 
     docker:
       - image: circleci/node:12

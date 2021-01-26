@@ -59,7 +59,7 @@ describe('StatusPageIOService', () => {
       after(() => SpyMock.restoreAll())
 
       it('should not handle the `event`', () => {
-        expect(spies.axios).to.not.have.been.calledOnce
+        expect(spies.axios).not.to.be.calledOnce
       })
     })
   })
@@ -102,7 +102,7 @@ describe('StatusPageIOService', () => {
       after(() => SpyMock.restoreAll())
 
       it('should update the `components`', () => {
-        expect(spies.updateComponentStatus).to.not.have.been.calledOnce
+        expect(spies.updateComponentStatus).not.to.be.calledOnce
       })
     })
   })
