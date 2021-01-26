@@ -56,11 +56,11 @@ jobs:
           key: node-cache-{{ .Environment.CACHE_VERSION }}-{{ .Branch }}-{{ checksum "package.json" }}
 
       - run:
-          name    : Running unit tests
+          name    : Setting env var
           command : cp .env.example .env
 
       - run:
-          name    : Running unit tests
+          name    : Running tests
           command : npm run test
 
       - store_artifacts:
