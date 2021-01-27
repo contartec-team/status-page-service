@@ -1,3 +1,10 @@
+## 0.2.0 (2021-01-27)
+
+
+### Features
+
+* [`StatusService`] Add `headers` no `.getAPIResponse`
+
 ## 0.1.0 (2021-01-26)
 
 
