@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8'>
-  <title>@contartec/generic-model 0.2.0 | Documentation</title>
+  <title>@contartec-team/status-page-service 0.1.0 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
   <link href='assets/style.css' rel='stylesheet'>
@@ -13,8 +13,8 @@
     <div class='flex'>
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
-          <h3 class='mb0 no-anchor'>@contartec/generic-model</h3>
-          <div class='mb1'><code>0.2.0</code></div>
+          <h3 class='mb0 no-anchor'>@contartec-team/status-page-service</h3>
+          <div class='mb1'><code>0.1.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -25,9 +25,9 @@
               
                 
                 <li><a
-                  href='#genericjsoncache'
+                  href='#statuspageioservice'
                   class=" toggle-sibling">
-                  GenericJSONCache
+                  StatusPageIOService
                   <span class='icon'>▸</span>
                 </a>
                 
@@ -37,45 +37,33 @@
                     <li class='h5'><span>Static members</span></li>
                     
                       <li><a
-                        href='#genericjsoncacheparsecachestring'
+                        href='#statuspageioservicestatus'
                         class='regular pre-open'>
-                        .parseCacheString
+                        .STATUS
                       </a></li>
                     
                       <li><a
-                        href='#genericjsoncacheiscached'
+                        href='#statuspageioservicestatus_number'
                         class='regular pre-open'>
-                        .isCached
+                        .STATUS_NUMBER
                       </a></li>
                     
                       <li><a
-                        href='#genericjsoncache_getkeynamescache'
+                        href='#statuspageioservicedefault_headers'
                         class='regular pre-open'>
-                        ._getKeyNamesCache
+                        .DEFAULT_HEADERS
                       </a></li>
                     
                       <li><a
-                        href='#genericjsoncache_getcache'
+                        href='#statuspageioserviceupdatecomponentstatus'
                         class='regular pre-open'>
-                        ._getCache
+                        .updateComponentStatus
                       </a></li>
                     
                       <li><a
-                        href='#genericjsoncache_getlistcache'
+                        href='#statuspageioserviceupdatecomponentsstatus'
                         class='regular pre-open'>
-                        ._getListCache
-                      </a></li>
-                    
-                      <li><a
-                        href='#genericjsoncache_setcache'
-                        class='regular pre-open'>
-                        ._setCache
-                      </a></li>
-                    
-                      <li><a
-                        href='#genericjsoncache_delete'
-                        class='regular pre-open'>
-                        ._delete
+                        .updateComponentsStatus
                       </a></li>
                     
                     </ul>
@@ -89,9 +77,9 @@
               
                 
                 <li><a
-                  href='#genericmodel'
+                  href='#statusservice'
                   class=" toggle-sibling">
-                  GenericModel
+                  StatusService
                   <span class='icon'>▸</span>
                 </a>
                 
@@ -101,39 +89,39 @@
                     <li class='h5'><span>Static members</span></li>
                     
                       <li><a
-                        href='#genericmodelquery_attr_names'
+                        href='#statusservice'
                         class='regular pre-open'>
-                        .QUERY_ATTR_NAMES
+                        .
                       </a></li>
                     
                       <li><a
-                        href='#genericmodelgetfilterobject'
+                        href='#statusservicedefault_axios_params'
                         class='regular pre-open'>
-                        .getFilterObject
+                        .DEFAULT_AXIOS_PARAMS
                       </a></li>
                     
                       <li><a
-                        href='#genericmodelgetall'
+                        href='#statusservicegetapiresponse'
                         class='regular pre-open'>
-                        .getAll
+                        .getAPIResponse
                       </a></li>
                     
                       <li><a
-                        href='#genericmodelgetcount'
+                        href='#statusservicegetapistatus'
                         class='regular pre-open'>
-                        .getCount
+                        .getAPIStatus
                       </a></li>
                     
                       <li><a
-                        href='#genericmodelgetone'
+                        href='#statusserviceupdatestatuspage'
                         class='regular pre-open'>
-                        .getOne
+                        .updateStatusPage
                       </a></li>
                     
                       <li><a
-                        href='#genericmodelsaveorupdate'
+                        href='#statusserviceupdatestatus'
                         class='regular pre-open'>
-                        .saveOrUpdate
+                        .updateStatus
                       </a></li>
                     
                     </ul>
@@ -142,16 +130,6 @@
                   
                   
                 </div>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#genericschema'
-                  class="">
-                  genericSchema
-                  
-                </a>
                 
                 </li>
               
@@ -170,17 +148,17 @@
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='genericjsoncache'>
-      GenericJSONCache
+    <h3 class='fl m0' id='statuspageioservice'>
+      StatusPageIOService
     </h3>
     
     
   </div>
   
 
-  <p>Contains a set of simple methods to handle the <code>redis</code> <code>ReJSON</code> type</p>
+  <p>Service that handle updates to <a href="https://www.atlassian.com/software/statuspage"><code>Status Page</code></a></p>
 
-    <div class='pre p1 fill-light mt0'>new GenericJSONCache()</div>
+    <div class='pre p1 fill-light mt0'>new StatusPageIOService()</div>
   
   
 
@@ -205,11 +183,11 @@
     <div class='py1 quiet mt1 prose-big'>Static Members</div>
     <div class="clearfix">
   
-    <div class='border-bottom' id='genericjsoncacheparsecachestring'>
+    <div class='border-bottom' id='statuspageioservicestatus'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>parseCacheString(cacheString)</span>
+            <span class='code strong strong truncate'>STATUS</span>
         </div>
       </div>
       <div class="clearfix display-none toggle-target">
@@ -217,689 +195,13 @@
 
   
 
-  <p>Returns the parsed cache value</p>
+  <p>The list of <code>component</code> <code>status</code></p>
 
-    <div class='pre p1 fill-light mt0'>parseCacheString(cacheString: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>cacheString</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    The 
-<code>cache</code>
- string
-
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>:
-        The parsed cache 
-<code>value</code>
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-      </div>
-    </div>
-  
-    <div class='border-bottom' id='genericjsoncacheiscached'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>isCached(keyName, args?)</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-
-  <p>Returns whether the <code>keyName</code> is cached or not</p>
-
-    <div class='pre p1 fill-light mt0'>isCached(keyName: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, args: any?): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>keyName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    The 
-<code>keyName</code>
-
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>args</span> <code class='quiet'>(any?)</code>
-	    The others attrs to fetch the 
-<code>keyName</code>
- through (and if it exists) 
-<code>.getKeyName</code>
-
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></code>:
-        Whether the 
-<code>keyName</code>
- is cached or not
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-      </div>
-    </div>
-  
-    <div class='border-bottom' id='genericjsoncache_getkeynamescache'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>_getKeyNamesCache(searchKey, commands = redis)</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-
-  <p>Returns the <code>key</code> names in cache</p>
-
-    <div class='pre p1 fill-light mt0'>_getKeyNamesCache(searchKey: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, commands: redis.Multi?): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>></div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>searchKey</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    The search string to fetch the key names
-
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>commands</span> <code class='quiet'>(redis.Multi?
-            = <code>redis</code>)</code>
-	    The 
-<code>redis</code>
- multi command object to chain(See 
-<a href="https://github.com/NodeRedis/node_redis#clientmulticommands">https://github.com/NodeRedis/node_redis#clientmulticommands</a>
-)
-
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>></code>:
-        The 
-<code>key</code>
- names in cache
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-      </div>
-    </div>
-  
-    <div class='border-bottom' id='genericjsoncache_getcache'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>_getCache(keyName, attrs, commands = redis)</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-
-  <p>Returns the <code>objects</code> cache object</p>
-
-    <div class='pre p1 fill-light mt0'>_getCache(keyName: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, attrs: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, commands: redis.Multi?): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>></div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>keyName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    The 
-<code>key</code>
- name
-
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>attrs</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
-            = <code>[]</code>)</code>
-	    The list of specified 
-<code>attrs</code>
- to return (
-<code>default: all</code>
-)
-
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>commands</span> <code class='quiet'>(redis.Multi?
-            = <code>redis</code>)</code>
-	    The 
-<code>redis</code>
- multi command object to chain(See 
-<a href="https://github.com/NodeRedis/node_redis#clientmulticommands">https://github.com/NodeRedis/node_redis#clientmulticommands</a>
-)
-
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>></code>:
-        The 
-<code>object</code>
- cache
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-      </div>
-    </div>
-  
-    <div class='border-bottom' id='genericjsoncache_getlistcache'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>_getListCache(keyNames, attrs, commands = redis.multi())</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-
-  <p>Returns the list of <code>objects</code> in cache</p>
-
-    <div class='pre p1 fill-light mt0'>_getListCache(keyNames: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, attrs: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, commands: redis.Multi?): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>></div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>keyNames</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    The 
-<code>key</code>
- name
-
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>attrs</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
-            = <code>[]</code>)</code>
-	    The list of specified 
-<code>attrs</code>
- to return (
-<code>default: all</code>
-)
-
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>commands</span> <code class='quiet'>(redis.Multi?
-            = <code>redis.multi()</code>)</code>
-	    The 
-<code>redis</code>
- multi command object to chain(See 
-<a href="https://github.com/NodeRedis/node_redis#clientmulticommands">https://github.com/NodeRedis/node_redis#clientmulticommands</a>
-)
-
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>></code>:
-        The 
-<code>objects</code>
- in cache
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-      </div>
-    </div>
-  
-    <div class='border-bottom' id='genericjsoncache_setcache'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>_setCache(keyName, object, attr, commands)</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-
-  <p>Sets the <code>object</code> to <code>keyName</code></p>
-
-    <div class='pre p1 fill-light mt0'>_setCache(keyName: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, object: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, attr: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, commands: redis.Multi): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>></div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>keyName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    The 
-<code>key</code>
- name
-
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>object</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
-	    The 
-<code>object</code>
-
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>attr</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
-            = <code>&#39;.&#39;</code>)</code>
-	    The 
-<code>attr</code>
- name
-
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>commands</span> <code class='quiet'>(redis.Multi
-            = <code>redis</code>)</code>
-	    The 
-<code>redis</code>
- multi command object to chain(See 
-<a href="https://github.com/NodeRedis/node_redis#clientmulticommands">https://github.com/NodeRedis/node_redis#clientmulticommands</a>
-)
-
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>></code>:
-        The 
-<code>status</code>
- of the operation
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-      </div>
-    </div>
-  
-    <div class='border-bottom' id='genericjsoncache_delete'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>_delete(keyName)</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-
-  <p>Deletes the <code>keyName</code> from cache</p>
-
-    <div class='pre p1 fill-light mt0'>_delete(keyName: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>keyName</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    The 
-<code>keyName</code>
-
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code>:
-        The count of deleted keys
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-      </div>
-    </div>
-  
-</div>
-
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='genericmodel'>
-      GenericModel
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Contains a set of chewed methods to handle documents</p>
-
-    <div class='pre p1 fill-light mt0'>new GenericModel()</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Static Members</div>
-    <div class="clearfix">
-  
-    <div class='border-bottom' id='genericmodelquery_attr_names'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>QUERY_ATTR_NAMES</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-
-  <p>The <code>attrs</code> list to (build the <code>query</code>) fetch the <code>documents</code></p>
-
-    <div class='pre p1 fill-light mt0'>QUERY_ATTR_NAMES</div>
+    <div class='pre p1 fill-light mt0'>STATUS</div>
   
     <p>
       Type:
-      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
     </p>
   
   
@@ -933,11 +235,11 @@
       </div>
     </div>
   
-    <div class='border-bottom' id='genericmodelgetfilterobject'>
+    <div class='border-bottom' id='statuspageioservicestatus_number'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>getFilterObject(params)</span>
+            <span class='code strong strong truncate'>STATUS_NUMBER</span>
         </div>
       </div>
       <div class="clearfix display-none toggle-target">
@@ -945,9 +247,113 @@
 
   
 
-  <p>Returns the (<code>mongodb</code>'s) <code>filter</code> object</p>
+  <p>The list of <code>component</code> <code>status</code> numbers</p>
 
-    <div class='pre p1 fill-light mt0'>getFilterObject(params: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></div>
+    <div class='pre p1 fill-light mt0'>STATUS_NUMBER</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='statuspageioservicedefault_headers'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>DEFAULT_HEADERS</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Default <code>headers</code></p>
+
+    <div class='pre p1 fill-light mt0'>DEFAULT_HEADERS</div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='statuspageioserviceupdatecomponentstatus'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>updateComponentStatus(id, status, pageId = DEFAULT_PAGE_ID)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Updates the <code>component</code> status</p>
+
+    <div class='pre p1 fill-light mt0'>updateComponentStatus(id: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, status: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, pageId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>></div>
   
   
 
@@ -964,10 +370,33 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>params</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+            <span class='code bold'>id</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
 	    The 
-<code>filter</code>
- params
+<code>component</code>
+ id
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>status</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The 
+<code>component</code>
+ status (@see {link StatusPageIOService.COMPONENT_STATUS})
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>pageId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?
+            = <code>DEFAULT_PAGE_ID</code>)</code>
+	    The 
+<code>page</code>
+ id
 
           </div>
           
@@ -981,10 +410,8 @@
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>:
-        The 
-<code>filter</code>
- object
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>></code>:
+        The http response
 
       
     
@@ -1006,11 +433,11 @@
       </div>
     </div>
   
-    <div class='border-bottom' id='genericmodelgetall'>
+    <div class='border-bottom' id='statuspageioserviceupdatecomponentsstatus'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
             <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>getAll(params)</span>
+            <span class='code strong strong truncate'>updateComponentsStatus(componentIds, status, pageId = DEFAULT_PAGE_ID)</span>
         </div>
       </div>
       <div class="clearfix display-none toggle-target">
@@ -1018,9 +445,9 @@
 
   
 
-  <p>Returns the list of <code>Models</code></p>
+  <p>Updates the <code>components</code> status</p>
 
-    <div class='pre p1 fill-light mt0'>getAll(params: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;Model>></div>
+    <div class='pre p1 fill-light mt0'>updateComponentsStatus(componentIds: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>), status: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, pageId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>></div>
   
   
 
@@ -1037,157 +464,33 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>params</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
-            = <code>{}</code>)</code>
+            <span class='code bold'>componentIds</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>))</code>
 	    The 
-<code>filter</code>
- params
+<code>components</code>
+ ids
 
           </div>
           
         </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;Model>></code>:
-        The list of 
-<code>Models</code>
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-      </div>
-    </div>
-  
-    <div class='border-bottom' id='genericmodelgetcount'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>getCount(params)</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-
-  <p>Returns the count of <code>Models</code></p>
-
-    <div class='pre p1 fill-light mt0'>getCount(params: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>></div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>params</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
-            = <code>{}</code>)</code>
+            <span class='code bold'>status</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
 	    The 
-<code>filter</code>
- params
+<code>component</code>
+ status (@see {link StatusPageIOService.COMPONENT_STATUS})
 
           </div>
           
         </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>></code>:
-        The count of 
-<code>Models</code>
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-      </div>
-    </div>
-  
-    <div class='border-bottom' id='genericmodelgetone'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>getOne(params)</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-
-  <p>Returns the <code>Model</code></p>
-
-    <div class='pre p1 fill-light mt0'>getOne(params: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;Model></div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>params</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
-            = <code>{}</code>)</code>
+            <span class='code bold'>pageId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?
+            = <code>DEFAULT_PAGE_ID</code>)</code>
 	    The 
-<code>filter</code>
- params
+<code>page</code>
+ id
 
           </div>
           
@@ -1201,82 +504,8 @@
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;Model></code>:
-        The 
-<code>Model</code>
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-      </div>
-    </div>
-  
-    <div class='border-bottom' id='genericmodelsaveorupdate'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>saveOrUpdate(object)</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-
-  <p>Saves the <code>Model</code></p>
-
-    <div class='pre p1 fill-light mt0'>saveOrUpdate(object: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;Model></div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>object</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
-	    The 
-<code>Model</code>
- object
-
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;Model></code>:
-        The saved 
-<code>Model</code>
- object
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>></code>:
+        The http responses
 
       
     
@@ -1317,21 +546,163 @@
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='genericschema'>
-      genericSchema
+    <h3 class='fl m0' id='statusservice'>
+      StatusService
     </h3>
     
     
   </div>
   
 
-  <p>Besides preparing <code>GenericModel</code> to be happily inherited as a <code>mongoose.Schema</code> super class:</p>
-<ul>
-<li>Enable <code>Lambda</code> like functionality for <code>db</code> connections</li>
-<li>Broadcast model events (see [<code>mongoose-lifecycle</code>]<a href="https://www.npmjs.com/package/mongoose-lifecycle">https://www.npmjs.com/package/mongoose-lifecycle</a>)</li>
-</ul>
+  <p>Handle <code>Status Page</code> updates</p>
 
-    <div class='pre p1 fill-light mt0'>genericSchema(schema: mongoose.Schema, options: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, dbConnectFunction: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>?): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></div>
+    <div class='pre p1 fill-light mt0'>new StatusService()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Static Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='statusservice'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'></span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Status page status list</p>
+
+    <div class='pre p1 fill-light mt0'></div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='statusservicedefault_axios_params'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>DEFAULT_AXIOS_PARAMS</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Return the env var params</p>
+
+    <div class='pre p1 fill-light mt0'>DEFAULT_AXIOS_PARAMS</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>:
+        The API env vars
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='statusservicegetapiresponse'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>getAPIResponse(params)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Return the web API</p>
+
+    <div class='pre p1 fill-light mt0'>getAPIResponse(params: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></div>
   
   
 
@@ -1348,10 +719,208 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>schema</span> <code class='quiet'>(mongoose.Schema)</code>
-	    The 
-<code>mongoose</code>
- schema object
+            <span class='code bold'>params</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+            = <code>{}</code>)</code>
+	    The axios params
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>params.url</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
+  </td>
+  <td class='break-word'><span>The server url
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>params.method</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
+  </td>
+  <td class='break-word'><span>The request method
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>params.headers</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
+  </td>
+  <td class='break-word'><span>The headers request
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>params.data</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
+  </td>
+  <td class='break-word'><span>The body request
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>params.params</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>
+  </td>
+  <td class='break-word'><span>The URL parameters
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>:
+        The axios response
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='statusservicegetapistatus'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>getAPIStatus(status)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Return the API status</p>
+
+    <div class='pre p1 fill-light mt0'>getAPIStatus(status: (StatusService.STATUS | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)): StatusService.STATUS</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>status</span> <code class='quiet'>((StatusService.STATUS | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>))</code>
+	    The http status code
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>StatusService.STATUS</code>:
+        The API status
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='statusserviceupdatestatuspage'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>updateStatusPage(status, componentIds)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Updates the <code>Status Page</code> with <code>status</code></p>
+
+    <div class='pre p1 fill-light mt0'>updateStatusPage(status: (StatusService.STATUS | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>), componentIds: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>status</span> <code class='quiet'>((StatusService.STATUS | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>))</code>
+	    The new status
 
           </div>
           
@@ -1359,26 +928,82 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>options</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+            <span class='code bold'>componentIds</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>>
+            = <code>COMPONENT_IDS</code>)</code>
 	    The 
-<code>schema</code>
- options
+<code>Status Page</code>
+ components ids separeted by comma
 
           </div>
           
         </div>
       
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        The lambda response invocation
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='statusserviceupdatestatus'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>updateStatus(params = {})</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Updates the component(s) <code>status</code></p>
+
+    <div class='pre p1 fill-light mt0'>updateStatus(params: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?): StatusService.STATUS</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>dbConnectFunction</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>?)</code>
-	    The 
-<code>db</code>
- connect 
-<code>function</code>
- (for 
-<code>Lambda</code>
- and alikes, see 
-<a href="https://mongoosejs.com/docs/lambda.html">https://mongoosejs.com/docs/lambda.html</a>
+            <span class='code bold'>params</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>?
+            = <code>{}</code>)</code>
+	    The axios params (@see 
+<a href="#statusservicegetapiresponse">StatusService.getAPIResponse</a>
 )
 
           </div>
@@ -1393,17 +1018,8 @@
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>:
-        The 
-[
-<code>GenericModel</code>
-]
-<a href="#genericmodel">GenericModel</a>
- and its 
-[
-<code>Schema</code>
-]
-<a href="https://mongoosejs.com/docs/api/schema.html#schema_Schema">https://mongoosejs.com/docs/api/schema.html#schema_Schema</a>
+      <code>StatusService.STATUS</code>:
+        The API status
 
       
     
@@ -1412,87 +1028,20 @@
   
 
   
-    <div class='py1 quiet mt1 prose-big'>Example</div>
-    
-      
-      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// db.js</span>
-<span class="hljs-keyword">const</span> mongoose = <span class="hljs-built_in">require</span>(<span class="hljs-string">'mongoose'</span>)
 
-<span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> mongoose.connect(process.env.MONGODB_URL)
-
-<span class="hljs-comment">// You.js</span>
-<span class="hljs-keyword">const</span> db = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./db'</span>)
-
-<span class="hljs-keyword">const</span> SCHEMA = {
-   <span class="hljs-attr">name</span>: <span class="hljs-built_in">String</span>,
-   <span class="hljs-attr">life</span>: <span class="hljs-built_in">Number</span>,
-   ...
-}
-
-<span class="hljs-keyword">const</span> OPTIONS = {
-   <span class="hljs-attr">_id</span>     : <span class="hljs-literal">true</span>,
-   <span class="hljs-attr">strict</span>  : <span class="hljs-literal">false</span>,
-   ...
-}
-
-<span class="hljs-keyword">const</span> { GenericModel, GenericSchema } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'lib/models/GenericSchema'</span>)(SCHEMA, OPTIONS, db)
-
-<span class="hljs-built_in">module</span>.exports = mongoose.model(<span class="hljs-string">'You'</span>, GenericSchema)
-
-<span class="hljs-comment">// file.js</span>
-<span class="hljs-keyword">const</span> You = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./You'</span>)
-
-You.save({ <span class="hljs-attr">name</span>: <span class="hljs-string">'you'</span> })
-
-<span class="hljs-keyword">const</span> you = <span class="hljs-keyword">await</span> You.getOne({ <span class="hljs-attr">name</span>: <span class="hljs-string">'you'</span> })
-<span class="hljs-comment">// {</span>
-<span class="hljs-comment">//   _id : idRandom,</span>
-<span class="hljs-comment">//   name: 'you'</span>
-<span class="hljs-comment">// }</span>
-
-you.name = <span class="hljs-string">'arpel'</span>
-
-<span class="hljs-keyword">await</span> you.save()
-
-<span class="hljs-keyword">await</span> You.getAll()
-<span class="hljs-comment">// [(1)]</span>
-
-<span class="hljs-keyword">await</span> You.find()
-<span class="hljs-comment">// [(1)]</span></pre>
-    
-      
-      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">// You.js</span>
-<span class="hljs-keyword">const</span> { GenericModel, GenericSchema } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'lib/models/GenericSchema'</span>)(SCHEMA, OPTIONS)
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">You</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">GenericModel</span> </span>{
-   arpel() {
-     <span class="hljs-keyword">this</span>.name = <span class="hljs-string">'arpel'</span>
-
-     <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.save()
-   }
-
-   <span class="hljs-keyword">static</span> <span class="hljs-keyword">async</span> arpel() {
-     <span class="hljs-keyword">return</span> You.save({ <span class="hljs-attr">name</span>: <span class="hljs-string">'arpel'</span> })
-   }
-}
-
-<span class="hljs-built_in">module</span>.exports = mongoose.model(<span class="hljs-string">'You'</span>, GenericSchema)
-
-<span class="hljs-comment">// file.js</span>
-<span class="hljs-keyword">const</span> You = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./You'</span>)
-
-<span class="hljs-keyword">const</span> you = <span class="hljs-keyword">new</span> You()
-
-<span class="hljs-keyword">await</span> you.arpel()
-<span class="hljs-keyword">await</span> You.arpel()
-
-You.getCount({ <span class="hljs-attr">name</span>: <span class="hljs-string">'arpel'</span> })
-<span class="hljs-comment">// 2</span>
-
-You.count({ <span class="hljs-attr">name</span>: <span class="hljs-string">'arpel'</span> })
-<span class="hljs-comment">// 2</span></pre>
-    
   
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
 
   
 
