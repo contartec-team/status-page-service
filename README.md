@@ -10,3 +10,7 @@ Services for `Status Page`
 ## Install
 
 `npm i @contartec-team/status-page-service`
+
+## Docs
+
+https://contartec-team.github.io/status-page-service/index
