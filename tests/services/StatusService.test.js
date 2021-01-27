@@ -15,6 +15,7 @@ describe('StatusService', () => {
         axiosParams = { 
           url     : process.env.API_URL,
           method  : process.env.API_METHOD,
+          headers : JSON.parse(process.env.API_HEADERS),
           data    : JSON.parse(process.env.API_POST_BODY),
           params  : JSON.parse(process.env.API_QUERY_STRING)
         }
@@ -39,6 +40,7 @@ describe('StatusService', () => {
         axiosParams = { 
           url     : '',
           method  : process.env.API_METHOD,
+          headers : JSON.parse(process.env.API_HEADERS),
           data    : JSON.parse(process.env.API_POST_BODY),
           params  : JSON.parse(process.env.API_QUERY_STRING)
         }
@@ -47,6 +49,33 @@ describe('StatusService', () => {
       })
 
       after(() => process.env.API_URL = url)
+
+      it('should return `axios` params from env vars', () => {
+        expect(params).to.eql(axiosParams)
+      })
+    })
+
+    context('when `API_HEADERS` is `null`', () => {
+      const headers = process.env.API_HEADERS
+    
+      let axiosParams = {}
+      let params
+
+      before(() => {
+        process.env.API_HEADERS = ''
+
+        axiosParams = { 
+          url     : process.env.API_URL,
+          method  : process.env.API_METHOD,
+          headers : null,
+          data    : JSON.parse(process.env.API_POST_BODY),
+          params  : JSON.parse(process.env.API_QUERY_STRING)
+        }
+
+        params = StatusService.DEFAULT_AXIOS_PARAMS
+      })
+
+      after(() => process.env.API_HEADERS = headers)
 
       it('should return `axios` params from env vars', () => {
         expect(params).to.eql(axiosParams)
@@ -65,6 +94,7 @@ describe('StatusService', () => {
         axiosParams = { 
           url     : process.env.API_URL,
           method  : process.env.API_METHOD,
+          headers : JSON.parse(process.env.API_HEADERS),
           data    : null,
           params  : JSON.parse(process.env.API_QUERY_STRING)
         }
@@ -91,6 +121,7 @@ describe('StatusService', () => {
         axiosParams = { 
           url     : process.env.API_URL,
           method  : process.env.API_METHOD,
+          headers : JSON.parse(process.env.API_HEADERS),
           data    : JSON.parse(process.env.API_POST_BODY),
           params  : null
         }
@@ -116,6 +147,7 @@ describe('StatusService', () => {
           axiosParams = { 
             url     : 'https://sistema.contartec.com.br/',
             method  : 'POST',
+            headers : JSON.parse(process.env.API_HEADERS),
             data    : JSON.parse('{"username":"la","password":"ha"}'),
             params  : JSON.parse('{"mac":"c4:2a:fe"}')
           }
@@ -143,6 +175,7 @@ describe('StatusService', () => {
           axiosParams = { 
             url     : '',
             method  : 'POST',
+            headers : JSON.parse(process.env.API_HEADERS),
             data    : JSON.parse('{"username":"la","password":"ha"}'),
             params  : JSON.parse('{"mac":"c4:2a:fe"}')
           }
@@ -162,6 +195,34 @@ describe('StatusService', () => {
         })
       })
 
+      context('when `headers` are `null`', () => {
+        let axiosParams = {}
+        let spies = {}
+
+        before(async () => {
+          axiosParams = { 
+            url     : 'https://sistema.contartec.com.br/',
+            method  : 'POST',
+            headers : null,
+            data    : JSON.parse('{"username":"la","password":"ha"}'),
+            params  : JSON.parse('{"mac":"c4:2a:fe"}')
+          }
+
+          spies = {
+            axios: SpyMock
+              .addDependencySpy(StatusService, 'axios')
+          }
+
+          await StatusService.getAPIResponse(axiosParams)
+        })
+
+        after(() => SpyMock.restoreAll())
+
+        it('should call `axios` with env var params', () => {
+          expect(spies.axios.getCall(0).args[0]).to.eql(axiosParams)
+        })
+      })
+
       context('when `data` is `null`', () => {
         let axiosParams = {}
         let spies = {}
@@ -170,6 +231,7 @@ describe('StatusService', () => {
           axiosParams = { 
             url     : 'https://sistema.contartec.com.br/',
             method  : 'POST',
+            headers : JSON.parse(process.env.API_HEADERS),
             data    : null,
             params  : JSON.parse('{"mac":"c4:2a:fe"}')
           }
@@ -197,6 +259,7 @@ describe('StatusService', () => {
           axiosParams = { 
             url     : 'https://sistema.contartec.com.br/',
             method  : 'POST',
+            headers : JSON.parse(process.env.API_HEADERS),
             data    : JSON.parse('{"username":"la","password":"ha"}'),
             params  : null
           }
@@ -226,6 +289,7 @@ describe('StatusService', () => {
           axiosParams = { 
             url     : process.env.API_URL,
             method  : process.env.API_METHOD,
+            headers : JSON.parse(process.env.API_HEADERS),
             data    : JSON.parse(process.env.API_POST_BODY),
             params  : JSON.parse(process.env.API_QUERY_STRING)
           }
@@ -272,6 +336,42 @@ describe('StatusService', () => {
         })
       })
 
+      context('when `API_HEADERS` is `null`', () => {
+        const headers = process.env.API_HEADERS
+      
+        let axiosParams = {}
+        let spies = {}
+
+        before(async () => {
+          process.env.API_HEADERS = ''
+
+          axiosParams = { 
+            url     : process.env.API_URL,
+            method  : process.env.API_METHOD,
+            headers : null,
+            data    : JSON.parse(process.env.API_POST_BODY),
+            params  : JSON.parse(process.env.API_QUERY_STRING)
+          }
+
+          spies = {
+            axios: SpyMock
+              .addDependencySpy(StatusService, 'axios')
+          }
+
+          await StatusService.getAPIResponse()
+        })
+
+        after(async () => {
+          SpyMock.restoreAll()
+
+          process.env.API_HEADERS = headers
+        })
+
+        it('should call `axios` with env var params', () => {
+          expect(spies.axios.getCall(0).args[0]).to.eql(axiosParams)
+        })
+      })
+
       context('when `API_POST_BODY` is `null`', () => {
         const body = process.env.API_POST_BODY
       
@@ -284,6 +384,7 @@ describe('StatusService', () => {
           axiosParams = { 
             url     : process.env.API_URL,
             method  : process.env.API_METHOD,
+            headers : JSON.parse(process.env.API_HEADERS),
             data    : null,
             params  : JSON.parse(process.env.API_QUERY_STRING)
           }
@@ -319,6 +420,7 @@ describe('StatusService', () => {
           axiosParams = { 
             url     : process.env.API_URL,
             method  : process.env.API_METHOD,
+            headers : JSON.parse(process.env.API_HEADERS),
             data    : JSON.parse(process.env.API_POST_BODY),
             params  : null
           }
