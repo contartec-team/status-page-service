@@ -12,7 +12,7 @@ describe('StatusService', () => {
       let params
 
       before(() => {
-        axiosParams = { 
+        axiosParams = {
           url     : process.env.API_URL,
           method  : process.env.API_METHOD,
           headers : JSON.parse(process.env.API_HEADERS),
@@ -37,7 +37,7 @@ describe('StatusService', () => {
       before(() => {
         process.env.API_URL = ''
 
-        axiosParams = { 
+        axiosParams = {
           url     : '',
           method  : process.env.API_METHOD,
           headers : JSON.parse(process.env.API_HEADERS),
@@ -57,14 +57,14 @@ describe('StatusService', () => {
 
     context('when `API_HEADERS` is `null`', () => {
       const headers = process.env.API_HEADERS
-    
+
       let axiosParams = {}
       let params
 
       before(() => {
         process.env.API_HEADERS = ''
 
-        axiosParams = { 
+        axiosParams = {
           url     : process.env.API_URL,
           method  : process.env.API_METHOD,
           headers : null,
@@ -84,14 +84,14 @@ describe('StatusService', () => {
 
     context('when `API_POST_BODY` is `null`', () => {
       const body = process.env.API_POST_BODY
-    
+
       let axiosParams = {}
       let params
 
       before(async () => {
         process.env.API_POST_BODY = ''
 
-        axiosParams = { 
+        axiosParams = {
           url     : process.env.API_URL,
           method  : process.env.API_METHOD,
           headers : JSON.parse(process.env.API_HEADERS),
@@ -111,14 +111,14 @@ describe('StatusService', () => {
 
     context('when `API_QUERY_STRING` is `null`', () => {
       const queryString = process.env.API_QUERY_STRING
-    
+
       let axiosParams = {}
       let params
 
       before(() => {
         process.env.API_QUERY_STRING = ''
 
-        axiosParams = { 
+        axiosParams = {
           url     : process.env.API_URL,
           method  : process.env.API_METHOD,
           headers : JSON.parse(process.env.API_HEADERS),
@@ -144,7 +144,7 @@ describe('StatusService', () => {
         let spies = {}
 
         before(async () => {
-          axiosParams = { 
+          axiosParams = {
             url     : 'https://sistema.contartec.com.br/',
             method  : 'POST',
             headers : JSON.parse(process.env.API_HEADERS),
@@ -172,7 +172,7 @@ describe('StatusService', () => {
         let spies = {}
 
         before(async () => {
-          axiosParams = { 
+          axiosParams = {
             url     : '',
             method  : 'POST',
             headers : JSON.parse(process.env.API_HEADERS),
@@ -200,7 +200,7 @@ describe('StatusService', () => {
         let spies = {}
 
         before(async () => {
-          axiosParams = { 
+          axiosParams = {
             url     : 'https://sistema.contartec.com.br/',
             method  : 'POST',
             headers : null,
@@ -228,7 +228,7 @@ describe('StatusService', () => {
         let spies = {}
 
         before(async () => {
-          axiosParams = { 
+          axiosParams = {
             url     : 'https://sistema.contartec.com.br/',
             method  : 'POST',
             headers : JSON.parse(process.env.API_HEADERS),
@@ -256,7 +256,7 @@ describe('StatusService', () => {
         let spies = {}
 
         before(async () => {
-          axiosParams = { 
+          axiosParams = {
             url     : 'https://sistema.contartec.com.br/',
             method  : 'POST',
             headers : JSON.parse(process.env.API_HEADERS),
@@ -286,7 +286,7 @@ describe('StatusService', () => {
         let spies = {}
 
         before(async () => {
-          axiosParams = { 
+          axiosParams = {
             url     : process.env.API_URL,
             method  : process.env.API_METHOD,
             headers : JSON.parse(process.env.API_HEADERS),
@@ -338,14 +338,14 @@ describe('StatusService', () => {
 
       context('when `API_HEADERS` is `null`', () => {
         const headers = process.env.API_HEADERS
-      
+
         let axiosParams = {}
         let spies = {}
 
         before(async () => {
           process.env.API_HEADERS = ''
 
-          axiosParams = { 
+          axiosParams = {
             url     : process.env.API_URL,
             method  : process.env.API_METHOD,
             headers : null,
@@ -374,14 +374,14 @@ describe('StatusService', () => {
 
       context('when `API_POST_BODY` is `null`', () => {
         const body = process.env.API_POST_BODY
-      
+
         let axiosParams = {}
         let spies = {}
 
         before(async () => {
           process.env.API_POST_BODY = ''
 
-          axiosParams = { 
+          axiosParams = {
             url     : process.env.API_URL,
             method  : process.env.API_METHOD,
             headers : JSON.parse(process.env.API_HEADERS),
@@ -410,14 +410,14 @@ describe('StatusService', () => {
 
       context('when `API_QUERY_STRING` is `null`', () => {
         const queryString = process.env.API_QUERY_STRING
-      
+
         let axiosParams = {}
         let spies = {}
 
         before(async () => {
           process.env.API_QUERY_STRING = ''
 
-          axiosParams = { 
+          axiosParams = {
             url     : process.env.API_URL,
             method  : process.env.API_METHOD,
             headers : JSON.parse(process.env.API_HEADERS),
@@ -507,7 +507,7 @@ describe('StatusService', () => {
       })
     })
   })
-  
+
   describe('.updateStatusPage', () => {
     context('when `status: 1`', () => {
       const STATUS = StatusService.STATUS.OPERATIONAL
@@ -628,32 +628,68 @@ describe('StatusService', () => {
 
   describe('.updateStatus', () => {
     context('when `webAPIResponse` is not `null`', () => {
-      const STATUS = 200
-      const STATUS_CODE = StatusService.STATUS.OPERATIONAL
+      context('when `webAPIResponse` is `200`', () => {
+        const STATUS = 200
+        const STATUS_CODE = StatusService.STATUS.OPERATIONAL
 
-      let response = null
-      let spies = {}
+        let response = null
+        let spies = {}
 
-      before(async () => {
-        spies = {
-          getAPIResponse: SpyMock
-            .addReturnSpy(StatusService, 'getAPIResponse', { status : STATUS }),
+        before(async () => {
+          spies = {
+            getAPIResponse: SpyMock
+              .addReturnSpy(StatusService, 'getAPIResponse', { status : STATUS }),
 
-          updateStatusPage: SpyMock
-            .addReturnSpy(StatusService, 'updateStatusPage')
-        }
-        
-        response = await StatusService.updateStatus()
+            updateStatusPage: SpyMock
+              .addReturnSpy(StatusService, 'updateStatusPage')
+          }
+
+          response = await StatusService.updateStatus()
+        })
+
+        after(() => SpyMock.restoreAll())
+
+        it('should return the `API` `statusCode`', () => {
+          expect(response).to.eql(STATUS_CODE)
+        })
+
+        it('should call `.updateStatusPage` once', () => {
+          expect(spies.updateStatusPage).to.be.calledOnce
+        })
       })
 
-      after(() => SpyMock.restoreAll())
+      context('when `webAPIResponse` is `400 || 500`', () => {
+        const STATUS = 400
+        const STATUS_CODE = StatusService.STATUS.PARTIAL_OUTAGE
 
-      it('should return `null`', () => {
-        expect(response).to.eql(STATUS_CODE)
-      })
+        let response = null
+        let spies = {}
 
-      it('should call `.updateStatusPage` once', () => {
-        expect(spies.updateStatusPage).to.be.calledOnce
+        before(async () => {
+          const apiMock = {
+            response: { status : STATUS }
+          }
+
+          spies = {
+            getAPIResponse: SpyMock
+              .addExceptionSpy(StatusService, 'getAPIResponse', apiMock),
+
+            updateStatusPage: SpyMock
+              .addReturnSpy(StatusService, 'updateStatusPage')
+          }
+
+          response = await StatusService.updateStatus()
+        })
+
+        after(() => SpyMock.restoreAll())
+
+        it('should return the `API` `statusCode`', () => {
+          expect(response).to.eql(STATUS_CODE)
+        })
+
+        it('should call `.updateStatusPage` once', () => {
+          expect(spies.updateStatusPage).to.be.calledOnce
+        })
       })
     })
 
@@ -663,7 +699,7 @@ describe('StatusService', () => {
       before(async () => {
         SpyMock
           .addReturnSpy(StatusService, 'getAPIResponse')
-        
+
         status = await StatusService.updateStatus()
       })
 
