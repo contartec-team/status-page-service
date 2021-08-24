@@ -1,3 +1,10 @@
+## 0.2.1 (2021-08-24)
+
+
+### Bug Fixes
+
+* [`StatusService`] `.updateStatus` não atualiza `StatusPage`
+
 ## 0.2.0 (2021-01-27)
 
 
